@@ -34,9 +34,12 @@ Kiten features:
 %_kde_bindir/kiten
 %_kde_bindir/kitengen
 %_kde_bindir/kitenradselect
+%_kde_bindir/kitenkanjibrowser
 %_kde_iconsdir/*/*/apps/kiten.*
 %_kde_datadir/applications/kde4/kiten.desktop
 %_kde_datadir/config.kcfg/kiten.kcfg
+%_kde_appsdir/kitenkanjibrowser
+%_datadir/fonts/kanjistrokeorders
 %doc  COPYING COPYING.DOC COPYING.LIB AUTHORS README
 %doc %_kde_docdir/HTML/en/kiten
 
