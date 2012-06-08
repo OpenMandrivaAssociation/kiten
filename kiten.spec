@@ -1,6 +1,6 @@
 Name: kiten
 Summary: A Japanese reference/learning tool
-Version: 4.8.3
+Version: 4.8.4
 Release: 1
 Group: Graphical desktop/KDE
 License: GPLv2 LGPLv2 GFDL
