@@ -1,6 +1,6 @@
 Name:		kiten
 Summary:	A Japanese reference/learning tool
-Version:	4.10.1
+Version:	4.10.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -92,6 +92,9 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
+- New version 4.10.2
+
 * Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.1-1
 - New version 4.10.1
 
