@@ -1,11 +1,11 @@
-Name:		kiten
 Summary:	A Japanese reference/learning tool
-Version:	4.13.3
-Release:	1
+Name:		kiten
+Version:	4.14.3
+Release:	2
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 LGPLv2 GFDL
-URL:		http://edu.kde.org/kiten
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/kiten
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 
 %description
@@ -31,6 +31,9 @@ Kiten features:
 %files
 %doc COPYING COPYING.DOC COPYING.LIB AUTHORS README
 %doc %{_kde_docdir}/HTML/en/kiten
+%{_kde_applicationsdir}/kiten.desktop
+%{_kde_applicationsdir}/kitenkanjibrowser.desktop
+%{_kde_applicationsdir}/kitenradselect.desktop
 %{_kde_appsdir}/kiten
 %{_kde_appsdir}/kitenradselect
 %{_kde_appsdir}/kitenkanjibrowser
@@ -38,14 +41,12 @@ Kiten features:
 %{_kde_bindir}/kitengen
 %{_kde_bindir}/kitenradselect
 %{_kde_bindir}/kitenkanjibrowser
-%{_kde_iconsdir}/*/*/apps/kiten.*
-%{_kde_applicationsdir}/kiten.desktop
-%{_kde_applicationsdir}/kitenkanjibrowser.desktop
-%{_kde_applicationsdir}/kitenradselect.desktop
+%{_kde_datadir}/appdata/kiten.appdata.xml
 %{_kde_datadir}/config.kcfg/kiten.kcfg
+%{_kde_iconsdir}/*/*/apps/kiten.*
 %{_datadir}/fonts/kanjistrokeorders
 
-#---------------------------------------------
+#----------------------------------------------------------------------------
 
 %define libkiten_major 4
 %define libkiten %mklibname kiten %{libkiten_major}
@@ -63,16 +64,16 @@ more types.
 %files -n %{libkiten}
 %{_kde_libdir}/libkiten.so.%{libkiten_major}*
 
-#---------------------------------------------
+#----------------------------------------------------------------------------
 
 %package devel
 Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
 Requires:	kdelibs4-devel
-Requires:	%{libkiten} = %{version}-%{release}
+Requires:	%{libkiten} = %{EVRD}
 Conflicts:	kdeedu4-devel < 4.6.90
 
-%description  devel
+%description devel
 Files needed to build applications based on %{name}.
 
 %files devel
@@ -92,6 +93,16 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+- Update files
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
