@@ -76,7 +76,7 @@ over various types of japanese dictionaries, with a simple facility for adding
 more types.
 
 %files -n %{libkiten}
-%{_kde_libdir}/libkiten.so.%{libkiten_major}*
+%{_kde5_libdir}/libkiten.so.%{libkiten_major}*
 
 #----------------------------------------------------------------------------
 
