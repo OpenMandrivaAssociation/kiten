@@ -1,6 +1,6 @@
 Summary:	A Japanese reference/learning tool
 Name:		kiten
-Version:	15.08.0
+Version:	15.08.1
 Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -9,6 +9,17 @@ Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5Completion)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5KHtml)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Widgets)
 
 %description
 Kiten is a Japanese reference/learning tool.
