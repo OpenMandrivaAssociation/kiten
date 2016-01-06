@@ -19,6 +19,8 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5KHtml)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(Qt5Widgets)
 
 %description
