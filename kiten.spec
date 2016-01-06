@@ -22,6 +22,7 @@ BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(KF5Crash)
 
 %description
 Kiten is a Japanese reference/learning tool.
