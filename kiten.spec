@@ -49,7 +49,7 @@ Kiten features:
 %doc %{_docdir}/HTML/en/kiten
 %{_datadir}/applications/org.kde.kiten.desktop
 %{_datadir}/applications/org.kde.kitenkanjibrowser.desktop
-%{_datadir}/applications/kitenradselect.desktop
+%{_datadir}/applications/org.kde.kitenradselect.desktop
 %{_datadir}/kiten
 %{_bindir}/kiten
 %{_bindir}/kitengen
