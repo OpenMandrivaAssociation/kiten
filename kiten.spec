@@ -1,11 +1,11 @@
 Summary:	A Japanese reference/learning tool
 Name:		kiten
-Version:	15.12.3
+Version:	16.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kiten
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake
 BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
