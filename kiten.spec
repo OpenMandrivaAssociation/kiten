@@ -52,7 +52,7 @@ Kiten features:
 %{_bindir}/kitengen
 %{_bindir}/kitenradselect
 %{_bindir}/kitenkanjibrowser
-%{_datadir}/metainfo/kiten.appdata.xml
+%{_datadir}/metainfo/*.xml
 %{_datadir}/config.kcfg/kiten.kcfg
 %{_iconsdir}/*/*/apps/kiten.*
 %{_datadir}/fonts/kanjistrokeorders
