@@ -6,8 +6,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kiten
 Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	cmake
-BuildRequires:	ninja
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Completion)
@@ -45,7 +43,6 @@ Kiten features:
 * Browse list, and get quizzed on them.
 
 %files
-%doc COPYING COPYING.DOC COPYING.LIB AUTHORS README
 %doc %{_docdir}/HTML/en/kiten
 %{_datadir}/applications/org.kde.kiten.desktop
 %{_datadir}/applications/org.kde.kitenkanjibrowser.desktop
@@ -55,7 +52,7 @@ Kiten features:
 %{_bindir}/kitengen
 %{_bindir}/kitenradselect
 %{_bindir}/kitenkanjibrowser
-%{_datadir}/appdata/kiten.appdata.xml
+%{_datadir}/metainfo/kiten.appdata.xml
 %{_datadir}/config.kcfg/kiten.kcfg
 %{_iconsdir}/*/*/apps/kiten.*
 %{_datadir}/fonts/kanjistrokeorders
@@ -86,7 +83,6 @@ more types.
 %package devel
 Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
-Requires:	kdelibs4-devel
 Requires:	%{libkiten} = %{EVRD}
 Conflicts:	kdeedu4-devel < 4.6.90
 
