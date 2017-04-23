@@ -1,6 +1,6 @@
 Summary:	A Japanese reference/learning tool
 Name:		kiten
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -42,8 +42,7 @@ Kiten features:
 * Add Kanji to a list for later learning.
 * Browse list, and get quizzed on them.
 
-%files
-%doc %{_docdir}/HTML/en/kiten
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.kiten.desktop
 %{_datadir}/applications/org.kde.kitenkanjibrowser.desktop
 %{_datadir}/applications/org.kde.kitenradselect.desktop
@@ -104,3 +103,4 @@ Files needed to build applications based on %{name}.
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
