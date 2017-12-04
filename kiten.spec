@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A Japanese reference/learning tool
 Name:		kiten
-Version:	17.08.3
+Version:	17.11.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
