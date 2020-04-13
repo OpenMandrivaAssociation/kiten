@@ -7,6 +7,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kiten
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		kiten-qt-5.15.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Completion)
@@ -96,7 +97,7 @@ Files needed to build applications based on %{name}.
 #----------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
