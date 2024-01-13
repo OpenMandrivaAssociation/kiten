@@ -2,7 +2,7 @@
 Summary:	A Japanese reference/learning tool
 Name:		plasma6-kiten
 Version:	24.01.90
-Release:	2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/kiten
@@ -15,12 +15,17 @@ BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6XmlGui)
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6Crash)
+BuildRequires:  cmake(Qt6Qml)
+BuildRequires:  cmake(Qt6QmlCore)
+BuildRequires:  cmake(Qt6QmlNetwork)
+BuildRequires:  qt6-qtbase-theme-gtk3
 
 %description
 Kiten is a Japanese reference/learning tool.
