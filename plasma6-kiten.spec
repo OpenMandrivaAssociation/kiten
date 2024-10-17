@@ -8,7 +8,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://edu.kde.org/kiten
+Url:		https://edu.kde.org/kiten
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/education/kiten/-/archive/%{gitbranch}/kiten-%{gitbranchd}.tar.bz2#/kiten-%{git}.tar.bz2
 %else
