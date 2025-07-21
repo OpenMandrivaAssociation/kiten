@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 Summary:	A Japanese reference/learning tool
 Name:		kiten
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -34,6 +34,11 @@ BuildRequires:  cmake(Qt6QmlCore)
 BuildRequires:  cmake(Qt6QmlNetwork)
 BuildRequires:  qt6-qtbase-theme-gtk3
 
+%rename plasma6-kiten
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Kiten is a Japanese reference/learning tool.
 
@@ -54,7 +59,7 @@ Kiten features:
 * Add Kanji to a list for later learning.
 * Browse list, and get quizzed on them.
 
-%files -f kiten.lang
+%files -f %{name}.lang
 %{_datadir}/applications/org.kde.kiten.desktop
 %{_datadir}/applications/org.kde.kitenkanjibrowser.desktop
 %{_datadir}/applications/org.kde.kitenradselect.desktop
@@ -92,6 +97,7 @@ Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
 Requires:	%{libkiten} = %{EVRD}
 Conflicts:	kdeedu4-devel < 4.6.90
+%rename plasma6-kiten-devel
 
 %description devel
 Files needed to build applications based on %{name}.
@@ -99,18 +105,3 @@ Files needed to build applications based on %{name}.
 %files devel
 %{_libdir}/libkiten.so
 %{_includedir}/libkiten/
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kiten-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kiten --with-html
